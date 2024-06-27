@@ -1,3 +1,15 @@
+local UILib = Instance.new("ScreenGui")
+UILib.Parent = game.CoreGui
+
+local NotificationContainer = Instance.new("TextLabel")
+NotificationContainer.Text = ""
+NotificationContainer.Size = UDim2.new(0, 200, 0, 50)
+NotificationContainer.Position = UDim2.new(0, 100, 100, -50)
+NotificationContainer.BackgroundColor3 = UILibrary.TabSelectedColor
+NotificationContainer.ZIndex = 2
+UILib.Parent:AddChild(NotificationContainer)
+
+-- Rest of your script
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 
