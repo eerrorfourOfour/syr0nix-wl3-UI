@@ -19,7 +19,7 @@ local NotificationContainer
 
 -- Create the UI library
 local UILib = Instance.new("ScreenGui")
-UILib.Parent = game.Players.LocalPlayer.PlayerGui
+UILib.Parent = game.CoreGui
 
 -- Create the tab container
 TabContainer = Instance.new("ScrollingFrame")
@@ -29,11 +29,10 @@ TabContainer.Size = UDim2.new(0, 250, 0, 500)
 UILib.Parent:AddChild(TabContainer)
 
 -- Create the notification container
-NotificationContainer = Instance.new("TextButton")
-NotificationContainer.Name = "NotificationContainer"
+NotificationContainer = Instance.new("TextLabel")
+NotificationContainer.Text = ""
 NotificationContainer.Size = UDim2.new(0, 200, 0, 50)
 NotificationContainer.Position = UDim2.new(0, 100, 100, -50)
-NotificationContainer.TextColor3 = UILibrary.TabTextColor
 NotificationContainer.BackgroundColor3 = UILibrary.TabSelectedColor
 NotificationContainer.ZIndex = 2
 UILib.Parent:AddChild(NotificationContainer)
@@ -89,7 +88,7 @@ end
 
 -- Create the notification system
 function showNotification(text)
-    NotificationContainer.Text.Textr=text
+    NotificationContainer.Text=text
 end
 
 -- Function to change the current tab when a tab is clicked
